@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import cmjs from 'consent-manager-js-sdk'
 
 class App extends Component {
   render() {
@@ -10,7 +11,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to Ogury Mocked Publisher</h1>
         </header>
-        <button style={styles.button}>Open the consent-manager (inactive for now)</button>
+        <button onClick={cmjs.ask} style={styles.button}>Open the consent-manager (inactive for now)</button>
       </div>
     );
   }
